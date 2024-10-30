@@ -1,9 +1,7 @@
 <nav>
     <div class="nav-top">
         <div class="logo">
-            <div class="logo-img">
-                <a href=""><img src="imgs/179yearoldman.jpg" alt=""></a>
-            </div>
+            <a href=""><img src="imgs/179yearoldman.jpg" alt=""></a>
         </div>
         <div class="top-left-nav">
             <div class="cart">
