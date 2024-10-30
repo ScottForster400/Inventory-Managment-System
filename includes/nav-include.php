@@ -4,9 +4,9 @@
             <a href=""><img src="imgs/179yearoldman.jpg" alt=""></a>
         </div>
         <div class="top-left-nav">
-            <!-- <div class="cart">
-                <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div> -->
+            <div class="cart">
+                <a href="" class="nav-button"><button><i class="fa fa-shopping-cart"></i>Checkout</button></a>
+            </div>
             <div class="log-out">
                 <a href="" class="nav-button"><button >Log Out</button></a>
             </div>

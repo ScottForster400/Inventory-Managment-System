@@ -36,6 +36,8 @@ nav #page-links{
 }
 .top-left-nav{
     padding: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .top-left-nav a{
     text-decoration: none;
