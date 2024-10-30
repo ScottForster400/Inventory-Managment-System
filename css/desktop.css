@@ -1,0 +1,17 @@
+nav a.burger {
+    display:none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+nav #page-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.nav-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

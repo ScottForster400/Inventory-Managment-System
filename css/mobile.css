@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+    height: auto;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+.nav-bar #page-links{
+    display: none;
+}
+.burger{
+    color: white;
+    padding: 6%;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+}
+.nav-bar a.burger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
