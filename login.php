@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gouner Games</title>
-    <link rel="stylesheet" href="naztest.css">
+    <link rel="stylesheet" href="css/desktop.css">
 
 </head>
 
@@ -23,7 +23,6 @@
             <button type="submit">Login</button>
         </form>
     </div>
-
 
 
 </body>
