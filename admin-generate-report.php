@@ -6,11 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/desktop.css" media="only screen and (min-width : 720px)">
-    <?php include ("connection.php");?>
+
 </head>
+<?php
+    include("includes/nav-include.php")
+?>
+
 <body>
-    <?php include("includes/nav-include.php");?>
     
-    <?php include("includes/footer-include.php");?>
+
+
+
+
+
+
+<?php
+    include("includes/footer-include.php")
+?>
 </body>
 </html>
