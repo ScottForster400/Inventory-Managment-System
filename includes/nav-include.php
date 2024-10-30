@@ -4,15 +4,15 @@
             <a href=""><img src="imgs/179yearoldman.jpg" alt=""></a>
         </div>
         <div class="top-left-nav">
-            <div class="cart">
+            <!-- <div class="cart">
                 <a href=""><i class="fas fa-shopping-cart"></i></a>
-            </div>
+            </div> -->
             <div class="log-out">
-                <button>Log Out</button>
+                <a href="" class="nav-button"><button >Log Out</button></a>
             </div>
         </div>
     </div>
-    <div nav-bottom>
+    <div class="nav-bottom">
         <div id="page-links">
             <a href="">Board Games</a>
             <a href="">Card Games</a>
