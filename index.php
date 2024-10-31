@@ -9,11 +9,28 @@
 
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/desktop.css" media="only screen and (min-width : 720px)">
+    <script src="js/main.js" defer></script>
     <?php include ("connection.php");?>
 </head>
 <body>
     <?php include("includes/nav-include.php");?>
-    
+    <main>
+        <section class="side-bar">
+            <div class="search-bar">
+
+            </div>
+            <div class="filters">
+
+            </div>
+        </section>
+        <section class="games-display">
+            <div class="games-row">
+                <div class="game">
+
+                </div>
+            </div>
+        </section>
+    </main>
     <?php include("includes/footer-include.php");?>
 </body>
 </html>
