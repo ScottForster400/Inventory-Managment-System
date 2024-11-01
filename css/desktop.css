@@ -100,3 +100,11 @@ nav #page-links{
     box-shadow: 0 8px 16px 0 rgba(167, 163, 163, 0.19), 0 6px 20px 0 rgba(167, 163, 163, 0.19);
 
 }
+
+.footer {
+    background-color: #005CE6;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
