@@ -17,7 +17,7 @@
         </div>
         <div class="top-left-nav">
             <div class="cart">
-                <a href="" class="nav-button"><button><i class="fa fa-shopping-cart"></i></button></a>
+                <a href="checkout-page.php?action=<?php echo $Basket ?>" class="nav-button"><button><i class="fa fa-shopping-cart"></i></button></a>
             </div>
             <div class="log-out">
                 <a href="" class="nav-button"><button >Log Out</button></a>
