@@ -12,8 +12,8 @@
 <body>
 <?php include("includes/nav-include.php");?>
 
-Generate Report
 
+<button type="button" class="btn btn-primary btn-lg">Generate Report</button>
 
 
 
