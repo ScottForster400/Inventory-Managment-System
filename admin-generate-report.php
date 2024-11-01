@@ -13,7 +13,34 @@
 <?php include("includes/nav-include.php");?>
 
 
-<button type="button" class="btn btn-primary btn-lg">Generate Report</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Month</th>
+      <th scope="col">Generate Report</th>
+
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td> Gooner</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 
 
 
