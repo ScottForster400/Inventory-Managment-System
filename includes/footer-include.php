@@ -1,6 +1,6 @@
 <footer>
-    <div class="">
-        <div class="">
+    <div class="footer">
+        <div class="contacts">
             <b>Contacts</b>
             <ul>
                 <li>Email - GounerGames@yahoo.co.uk</li>

@@ -101,9 +101,13 @@ nav #page-links{
 }
 
 .footer {
-    background-color: #005CE6;
+    background-color: #333;
     color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
+}
+
+.contacts {
+    padding: 5%;
+}
