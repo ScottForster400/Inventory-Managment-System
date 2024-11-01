@@ -9,7 +9,10 @@
     <?php include "connection.php";?>
 </head>
 <body>
-    <?php include("includes/nav-include.php");?>
+    <?php 
+        include("includes/nav-include.php");
+        $Basket = $_GET["action"];
+    ?>
     <div class="checkout-page-main-body">
         <div class="checkout-page-basket">
             <?php
