@@ -102,24 +102,8 @@ nav{
     padding-left: 5px;
 }
 
-nav #page-links{
-    display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #0149b5;;
-    height: 200px;
-}
-nav #page-links a{
-    height: 100%;
-    text-decoration: none;
-    width: 100%;
-    border-bottom: rgba(167, 163, 163, 0.19) solid 2px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
 
 .offscreen-menu{
     background-color: rgb(34, 37, 49);
