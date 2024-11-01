@@ -142,3 +142,6 @@ nav{
     font-size: 25px;
     display: block;
 }
+#page-links{
+    display: none;
+}
