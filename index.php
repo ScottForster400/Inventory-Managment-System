@@ -16,12 +16,15 @@
     <?php include("includes/nav-include.php");?>
     <main>
         <section class="side-bar">
-            <div class="search-bar">
+            <form action="">
+                <div class="search-bar">
+                    <input type="text" id="search" type="search" class="search-bar">
+                    <label for="search">Search</label>
+                </div>
+                <div class="filters">
 
-            </div>
-            <div class="filters">
-
-            </div>
+                </div>
+            </form>
         </section>
         <section class="games-display">
             <div class="games-row">
