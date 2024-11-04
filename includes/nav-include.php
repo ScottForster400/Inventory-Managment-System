@@ -1,5 +1,9 @@
 
 <!-- used https://www.youtube.com/watch?v=aNDqzlAKmZc to get a sidebar burger menu -->
+<?php 
+    session_start(); 
+    include "includes/connection.php";
+?>
 <div class="offscreen-menu">
     <ul>
         <li><a href="">Board Games</a></li>
@@ -13,7 +17,7 @@
 <nav>
     <div class="nav-top">
         <div class="logo">
-            <a href=""><img src="imgs/logo.png" alt="logo"></a>
+            <a href="index.php"><img src="imgs/logo.png" alt="logo"></a>
         </div>
         <div class="top-left-nav">
             <div class="cart">
@@ -34,6 +38,16 @@
             <a href="">Puzzles</a>
             <a href="">Figures</a>
             <a href="">Stock</a>
+            <?php 
+                $EmployeeUID = $_SESSION["EmployeeUID"];
+                $employee = $db->query("SELECT * FROM employee WHERE employee_id = $EmployeeUID");
+                $Results = $employee->fetch(PDO::FETCH_ASSOC);
+                $ADMcheck = $Results["admin"];
+                if ($ADMcheck == "true") {
+                    echo "<a href='admin-manage-employees.php'>Manage Employees</a>";
+                    echo "<a href='admin-generate-report.php'>Generate Report</a>";
+                }
+            ?>
         </div>
        
     </div>
