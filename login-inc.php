@@ -9,26 +9,23 @@
             header("Location: login.php?error=InvalidEmail");         
         }
 
-        $stmt = $db->prepare("SELECT * FROM Employee WHERE employee_id = 1");
-        //$stmt->bindParam("i", $id);
-        var_dump($EmailInput);
-        var_dump($PasswordInput);
-        var_dump($stmt);
+        $stmt = $db->prepare("SELECT * FROM employee WHERE email = :email");
+        $stmt->bindParam(':email', $EmailInput, PDO::PARAM_STR);
         $stmt->execute();
         var_dump($EmailInput);
-        $Results = $stmt->fetchColumn();
-        if ($Results->numRows > 0) {
-            while($employee = $Results->fetch_object()) {
-                $DbPWD = $employee->password;
-                // if (password_verify($PasswordInput, $DbPWD) == true) {
-                    var_dump($EmailInput);
-                    $id = $employee->employee_id;
-                    session_start();
-                    $_SESSION['EmployeeUID'] = $id;
-                    header('Location: index.php'); 
-                    exit();    
-                // }
-            }
+
+        $Results = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($Results) {
+            var_dump($EmailInput);
+            $DBpwd = $Results["password"];
+            // if (password_verify($PasswordInput, $DBpwd) == true) {
+                var_dump($EmailInput);
+                $id = $Results["employee_id"];
+                session_start();
+                $_SESSION['EmployeeUID'] = $id;
+                header('Location: index.php'); 
+                exit();      
+            // }
         }
     }
 ?>
