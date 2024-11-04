@@ -34,6 +34,17 @@
             <a href="">Puzzles</a>
             <a href="">Figures</a>
             <a href="">Stock</a>
+            <?php 
+                $EmployeeUID = $_SESSION["EmployeeUID"];
+                $employee = $conn->query("SELECT * FROM employee WHERE employee = $EmployeeUID");
+                $Results = $employee->fetch(PDO::FETCH_ASSOC);
+                $ADMcheck = $Results["IsAdmin"];
+                if ($ADMcheck == "true") {
+                    echo "<a href='admin-manage-employees.php'>Manage Employees</a>";
+                    echo "<a href='admin-generate-report.php'>Generate Report</a>";
+                }
+                echo "<a href='login.php?action=logout'>Log Out</a>";
+            ?>
         </div>
        
     </div>
