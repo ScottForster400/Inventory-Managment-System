@@ -20,7 +20,7 @@
             <input type="text" id="email" name="email" placeholder="Enter your staff ID" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
-            <button type="submit">Login</button>
+            <button type="submit">Log In</button>
         </form>
     </div>
 
