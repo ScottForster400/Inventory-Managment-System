@@ -27,13 +27,35 @@
                     <!-- used https://css-tricks.com/value-bubbles-for-range-inputs/ for sliders -->
                     <div class="range-wrap">
                         <label for="min-price">Min Price(£)</label>
-                        <input type="range" class="range" id="min-price">
+                        <input type="range" class="range" id="min-price" min="0" max="100">
                         <output class="bubble"></output>
                     </div>
                     <div class="range-wrap">
                         <label for="min-price">Max Price(£)</label>
-                        <input type="range" class="range" id="min-price">
+                        <input type="range" class="range" id="min-price" min="0" max="100">
                         <output class="bubble"></output>
+                    </div>
+                    <div class="range-wrap">
+                        <label for="min-price">Age</label>
+                        <input type="range" class="range" id="min-price" min="0" max="10">
+                        <output class="bubble"></output>
+                    </div>
+                    
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Board Games</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Card Games</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Puzzles</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Figures</label>
                     </div>
                 </div>
             </form>

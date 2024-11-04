@@ -110,7 +110,6 @@ nav #page-links{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
     flex: 25%;
     border: black 1px solid;
 }
@@ -146,7 +145,7 @@ nav #page-links{
     position: absolute;
     border-radius: 4px;
     left: 50%;
-    transform: translate(-52%,50%);
+    transform: translate(-54%,50%);
   }
   .bubble::after {
     content: "";
