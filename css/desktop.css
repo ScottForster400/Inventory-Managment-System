@@ -16,6 +16,7 @@
     height: 100%;
 }
 
+
 nav a.burger {
     display:none;
     position: absolute;
@@ -107,40 +108,110 @@ nav #page-links{
 }
 .side-bar{
     display: flex;
+    align-items: center;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     flex: 25%;
-    border: black 1px solid;
+    border: 1px #D2D2D2 solid;
+    border-left: 0px;
+    border-radius: 10px;
+    max-height: 90vh;
+}
+.side-bar ul{
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+}
+.side-bar form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    position: sticky;
+    height: 90vh;
+}
+.search-bar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filters{
+    width: 100%;
+}
+.filter{
+    padding-bottom: 10px;
+    width: 100%;
+}
+.accordion-filters{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filter-check{
+    min-width: 120px;
+    max-width: 120px;
+    padding-bottom: 2.5px;
+}
+.filter-check *{
+    min-width: 120px;
+    max-width: 120px;
 }
 .games-display{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     flex: 75%;
 }
-/* .games-row{
+.games-row{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    min-height: 200px;
-    padding-bottom: 20px;
-}*/
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 50px;
+}
 .game{
     display:flex;
     flex: 33%;
-    max-width: 200px;
+    max-width: 20vw;
+    border:#D2D2D2 solid 1px;
+    border-radius: 10px;
 } 
 
+.game-img{
+    display: flex;
+    flex: 50%;
+    justify-content:center;
+    align-items: center;
+}
+
+.game-body{
+    flex: 50%;
+}
+.game-img img{
+    width: 80%;
+}
 .options{
     display: flex;
     flex-direction: row;
+    padding-top: 20px;
 }
 .options *{
     flex: 50%;
 }
-
+.options :nth-child(1){
+    margin-right: 5px;
+}
+.options :nth-child(2){
+    margin-left: 5px;
+}
 
 .bubble {
     background: red;
