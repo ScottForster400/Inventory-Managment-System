@@ -67,35 +67,7 @@
                 <div class="game">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
                 </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
-            <div class="games-row">
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
-            <div class="games-row">
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
+                
         </section>
     </main>
     <?php include("includes/footer-include.php");?>

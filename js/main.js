@@ -7,9 +7,7 @@ function burgerMenu() {
   $('myModal').on('shown.bs.modal', function (){
     $('#myInput').trigger('focus')
   })
-<<<<<<< HEAD
 
-=======
   const allRanges = document.querySelectorAll(".range-wrap");
 allRanges.forEach(wrap => {
   const range = wrap.querySelector(".range");
@@ -31,4 +29,3 @@ function setBubble(range, bubble) {
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
->>>>>>> 602e75c78c64496f369efb6b29b6b5b91e0b6b65
