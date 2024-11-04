@@ -15,12 +15,12 @@
 
     <div class="login-section">
         <h2>Login</h2>
-        <form id="loginForm" method="post">
+        <form action="login-inc.php" id="loginForm" method="post">
             <label for="Staff ID">Staff ID:</label><br>
             <input type="text" id="email" name="email" placeholder="Enter your staff ID" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
-            <button type="submit">Login</button>
+            <input type="submit" name="submit" value="Login">
         </form>
     </div>
 
