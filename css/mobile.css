@@ -3,6 +3,8 @@ body{
     height: auto;
     text-align: center;
 }
+
+/* Nav */
 .logo{
     flex: 25%;
     display: flex;
