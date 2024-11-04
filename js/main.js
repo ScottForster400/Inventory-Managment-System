@@ -4,10 +4,6 @@ function burgerMenu() {
   };
 
 
-  $('myModal').on('shown.bs.modal', function (){
-    $('#myInput').trigger('focus')
-  })
-
 
 
   const allRanges = document.querySelectorAll(".range-wrap");
@@ -31,3 +27,7 @@ function setBubble(range, bubble) {
   // Sorta magic numbers based on size of the native UI thumb
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
+
+$('myModal').on('shown.bs.modal', function (){
+  $('#myInput').trigger('focus')
+})
