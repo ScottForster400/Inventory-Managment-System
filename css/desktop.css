@@ -232,3 +232,10 @@ nav #page-links{
 .login-section button:hover {
     background-color: #0056b3;
 }
+
+.error_message {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
