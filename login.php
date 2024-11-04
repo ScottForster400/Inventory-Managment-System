@@ -21,6 +21,15 @@
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
             <input type="submit" name="submit" value="Login">
+            <div class="error_message">
+                <?php
+                    if(isset($_GET["error"])) {
+                        if ($_GET["error"] == "InvalidEmail") {
+                            echo "<p>Email is invalid</p>";
+                        }
+                    }
+                ?>
+            </div>
         </form>
     </div>
 
