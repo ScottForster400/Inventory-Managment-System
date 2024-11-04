@@ -24,7 +24,7 @@
                 <a href="checkout-page.php?action=<?php echo $Basket ?>" class="nav-button"><button><i class="fa fa-shopping-cart"></i></button></a>
             </div>
             <div class="log-out">
-                <a href="" class="nav-button"><button >Log Out</button></a>
+                <a href="login.php" class="nav-button"><button >Log Out</button></a>
             </div>
             <div class="burger-menu">
                 <a href="javascript:void(0)" class="burger" onclick="burgerMenu()"><i class="fa fa-bars active"></i></a>
@@ -39,13 +39,15 @@
             <a href="">Figures</a>
             <a href="">Stock</a>
             <?php 
-                $EmployeeUID = $_SESSION["EmployeeUID"];
-                $employee = $db->query("SELECT * FROM employee WHERE employee_id = $EmployeeUID");
-                $Results = $employee->fetch(PDO::FETCH_ASSOC);
-                $ADMcheck = $Results["admin"];
-                if ($ADMcheck == "true") {
-                    echo "<a href='admin-manage-employees.php'>Manage Employees</a>";
-                    echo "<a href='admin-generate-report.php'>Generate Report</a>";
+                if(isset($_SESSION["EmployeeUID"])){
+                    $EmployeeUID = $_SESSION["EmployeeUID"];
+                    $employee = $db->query("SELECT * FROM employee WHERE employee_id = $EmployeeUID");
+                    $Results = $employee->fetch(PDO::FETCH_ASSOC);
+                    $ADMcheck = $Results["admin"];
+                    if ($ADMcheck == "true") {
+                        echo "<a href='admin-manage-employees.php'>Manage Employees</a>";
+                        echo "<a href='admin-generate-report.php'>Generate Report</a>";
+                    }
                 }
             ?>
         </div>
