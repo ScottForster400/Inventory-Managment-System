@@ -13,7 +13,7 @@
 <nav>
     <div class="nav-top">
         <div class="logo">
-            <a href=""><img src="imgs/179yearoldman.jpg" alt=""></a>
+            <a href=""><img src="imgs/logo.png" alt="logo"></a>
         </div>
         <div class="top-left-nav">
             <div class="cart">

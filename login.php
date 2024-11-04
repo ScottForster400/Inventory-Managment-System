@@ -20,7 +20,11 @@
             <input type="text" id="email" name="email" placeholder="Enter your staff ID" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+<<<<<<< HEAD
+            <button type="submit">Log In</button>
+=======
             <input type="submit" name="submit" value="Login">
+>>>>>>> 0603347c71d034f208435583fed2f0d8fb5ae5f8
         </form>
     </div>
 

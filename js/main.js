@@ -3,6 +3,11 @@ function burgerMenu() {
     offScreenMenu.classList.toggle('active');
   };
 
+
+  $('myModal').on('shown.bs.modal', function (){
+    $('#myInput').trigger('focus')
+  })
+
   const allRanges = document.querySelectorAll(".range-wrap");
 allRanges.forEach(wrap => {
   const range = wrap.querySelector(".range");

@@ -27,52 +27,47 @@
                     <!-- used https://css-tricks.com/value-bubbles-for-range-inputs/ for sliders -->
                     <div class="range-wrap">
                         <label for="min-price">Min Price(£)</label>
-                        <input type="range" class="range" id="min-price">
+                        <input type="range" class="range" id="min-price" min="0" max="100">
                         <output class="bubble"></output>
                     </div>
                     <div class="range-wrap">
                         <label for="min-price">Max Price(£)</label>
-                        <input type="range" class="range" id="min-price">
+                        <input type="range" class="range" id="min-price" min="0" max="100">
                         <output class="bubble"></output>
+                    </div>
+                    <div class="range-wrap">
+                        <label for="min-price">Age</label>
+                        <input type="range" class="range" id="min-price" min="0" max="10">
+                        <output class="bubble"></output>
+                    </div>
+                    
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="board-game-filt">
+                        <label class="form-check-label" for="board-game-filt">Board Games</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="card-game-filt">
+                        <label class="form-check-label" for="card-game-filt">Card Games</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="puzzle-filt">
+                        <label class="form-check-label" for="puzzle-filt">Puzzles</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="figure-filt">
+                        <label class="form-check-label" for="figure-filt">Figures</label>
                     </div>
                 </div>
             </form>
         </section>
+        
         <section class="games-display">
             <h3>Stock</h3>
             <div class="games-row">
                 <div class="game">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
                 </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
-            <div class="games-row">
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
-            <div class="games-row">
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-                <div class="game">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quas enim cum, dolorem officia odio adipisci deleniti atque minus nemo ducimus pariatur voluptatibus molestiae doloremque sapiente in non totam repudiandae?
-                </div>
-            </div>
+                
         </section>
     </main>
     <?php include("includes/footer-include.php");?>
