@@ -42,24 +42,25 @@
                     </div>
                     
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Board Games</label>
+                        <input class="form-check-input" type="checkbox" id="board-game-filt">
+                        <label class="form-check-label" for="board-game-filt">Board Games</label>
                     </div>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Card Games</label>
+                        <input class="form-check-input" type="checkbox" id="card-game-filt">
+                        <label class="form-check-label" for="card-game-filt">Card Games</label>
                     </div>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Puzzles</label>
+                        <input class="form-check-input" type="checkbox" id="puzzle-filt">
+                        <label class="form-check-label" for="puzzle-filt">Puzzles</label>
                     </div>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Figures</label>
+                        <input class="form-check-input" type="checkbox" id="figure-filt">
+                        <label class="form-check-label" for="figure-filt">Figures</label>
                     </div>
                 </div>
             </form>
         </section>
+        
         <section class="games-display">
             <h3>Stock</h3>
             <div class="games-row">
