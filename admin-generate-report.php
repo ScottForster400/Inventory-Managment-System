@@ -71,7 +71,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <?php echo $row["name"];?>: <?php echo $row["price"]; ?>
+                <?php echo $row["name"];?>: <?php echo $row["sale_price"]; ?>
               </div>
               <div class="modal-footer">
                 <button class="btn btn-primary" data-bs-target="#<?php echo $modalId; ?>" data-bs-toggle="modal">Normal Report</button>
