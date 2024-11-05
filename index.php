@@ -12,13 +12,13 @@
 <body>
     <?php include("includes/nav-include.php");?>
     <main class="main-page">
-        <section class="side-bar">
+        <section class="side-bar shadow-sm p-3 mb-5 bg-white rounded">
             <form action="">
                 <div class="search-bar">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Searchbar">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                            <button class="btn btn-outline-primary" type="button"><i class="fas fa-search" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
         <section class="games-display">
             <h3>Stock</h3>
             <div class="games-row">
-                <div class="game card">
+                <div class="game card ">
                     <div class="game-img">
                         <img class = "card-img-top" src="imgs/logo.png" alt="game">
                     </div>
@@ -146,7 +146,11 @@
                         </div>
                         <div class="options">
                             <button type="button" class="btn btn-outline-primary">Add to Cart</button>
-                            <button type="button" class="btn btn-outline-primary">Edit</button>
+                            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Edit
+                            </button>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -349,6 +353,83 @@
             </div>
                 
         </section>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                           <div class="form-group">
+                            <div class="row">
+                                    <div class="col">
+                                        <label for="item-name">Item Name</label>
+                                        <input type="text" class="form-control" placeholder="Item Name" id="item-name">
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="form-group">
+                            <div class="row">
+                                    <div class="col">
+                                        <label for="price">Price(£)</label>
+                                        <input type="number" class="form-control" placeholder="Price" id="price">
+                                    </div>
+                                    <div class="col">
+                                        <label for="amount">Amount</label>
+                                        <input type="number" class="form-control" placeholder="amount" id="amount" min="0.01">
+                                    </div>
+                                    <div class="col">
+                                        <label for="age-rating">Age Rating</label>
+                                        <input type="number" class="form-control" placeholder="Age Rating" id="age-rating">
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="min-players">Min Players</label>
+                                        <input type="number" class="form-control" placeholder="Min Players" id="min-players" min="1">
+                                    </div>
+                                    <div class="col">
+                                        <label for="max-players">Max Players</label>
+                                        <input type="number" class="form-control" placeholder="Max Players" id="max-players" >
+                                    </div>
+                                    <div class="col">
+                                        <label for="game-length">Game Length</label>
+                                        <input type="number" class="form-control" placeholder="Game Length" id="game-length">
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="form-group">
+                            <div class="row">
+                                    <div class="col">
+                                        <label for="game-type">Game Type</label>
+                                        <select id="game-type" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <label for="game-genre">Game Genre</label>
+                                        <select id="game-genre" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                           </div> 
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <?php include("includes/footer-include.php");?>
 </body>
