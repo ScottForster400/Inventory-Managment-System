@@ -15,16 +15,21 @@
 
     <div class="login-section">
         <h2>Login</h2>
-        <form action="login-inc.php" id="loginForm" method="post">
+        <form action="login-inc.php" id="loginForm" method="POST">
             <label for="Staff ID">Staff ID:</label><br>
             <input type="text" id="email" name="email" placeholder="Enter your staff ID" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
-<<<<<<< HEAD
-            <button type="submit">Log In</button>
-=======
             <input type="submit" name="submit" value="Login">
->>>>>>> 0603347c71d034f208435583fed2f0d8fb5ae5f8
+            <div class="error_message">
+                <?php
+                    if(isset($_GET["error"])) {
+                        if ($_GET["error"] == "InvalidEmail") {
+                            echo "<p>Email is invalid</p>";
+                        }
+                    }
+                ?>
+            </div>
         </form>
     </div>
 

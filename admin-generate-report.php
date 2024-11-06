@@ -12,8 +12,22 @@
 <body>
 <?php include("includes/nav-include.php");?>
 
+<?php
+
+
+
+    $sql = "SELECT *
+    FROM Transactions
+    LEFT JOIN Product ON (Transactions.product_ID = Product.product_ID)
+    ";
+
+    $statement = $db->query($sql);
+
+?>
+
 
 <table class="table">
+
   <thead>
     <tr>
       <th scope="col">Month</th>
@@ -22,52 +36,59 @@
     </tr>
   </thead>
   <tbody class="table-group-divider">
+    <?php
+      $index = 0;
+      while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        $index++;
+        $modalId = "exampleModalToggle" . $index;
+        $modalId2 = "exampleModalToggle2" . $index;
+    ?>
     <tr>
-      <th scope="row">October 2024</th>
-      <td>
-        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <th scope="row"><?php echo $row["date_of_sale"]?></th>
+      
+      <th scope="row">
+        <div class="modal fade" id="<?php echo $modalId; ?>" aria-hidden="true" aria-labelledby="<?php echo $modalId; ?>Label" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Monthly Report</h1>
+               <h1 class="modal-title fs-5" id="<?php echo $modalId1; ?>Label">Report</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Show a second modal and hide this one with the button below.
+                <?php echo $row["name"];?>: <?php echo $row["sale_price"]; ?>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second modal</button>
+                <button class="btn btn-primary" data-bs-target="#<?php echo $modalId2; ?>" data-bs-toggle="modal">Graph Based Report</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal fade" id="<?php echo $modalId2; ?>" aria-hidden="true" aria-labelledby="<?php echo $modalId2; ?>Label" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Graph Based Report</h1>
+                <h1 class="modal-title fs-5" id="<?php echo $modalId2; ?>Label">Graph Based Report</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Hide this modal and show the first with the button below.
+                <?php echo $row["name"];?>: <?php echo $row["sale_price"]; ?>
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+                <button class="btn btn-primary" data-bs-target="#<?php echo $modalId; ?>" data-bs-toggle="modal">Normal Report</button>
               </div>
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Generate Report</button>
-      </td>
-
+        <button class="btn btn-primary" data-bs-target="#<?php echo $modalId; ?>" data-bs-toggle="modal">Generate Report</button>
+      </th>
     </tr>
-  </tbody>
+    <?php
+      }
+    ?>
+</tbody>
+
+
 </table>
-
-
-
-
-
 
 
 <?php include("includes/footer-include.php");?>
