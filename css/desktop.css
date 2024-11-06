@@ -213,15 +213,6 @@ nav #page-links{
 
 /* CHECKOUT PAGE */
 
-/* .checkout {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 75%;
-    border: black solid 2px;
-    border-radius: 12px;
-} */
 
 .checkout-container {
     display: grid;
@@ -236,11 +227,33 @@ nav #page-links{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     color: #333;
     height: 200px; 
     margin-top: 30px;
+    margin-left: 100px;
+}
+
+.checkout-functions{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 75%;
+   
+}
+
+.checkout-buttons{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    height: 100px; 
+    margin-top: 50px;
     margin-left: 50px;
 }
 

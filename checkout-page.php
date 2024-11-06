@@ -15,15 +15,26 @@
 <body>
     
     <section class = "checkout">
-
-    <div class="checkout-container">
+        
+        <div class="checkout-container">
+    <a href="item-checkout.php" class="checkout-box-link">
         <div class="checkout-box">Board Games</div>
+    </a>
+    <a href="item-checkout.php" class="checkout-box-link">
         <div class="checkout-box">Card Games</div>
+    </a>
+    <a href="item-checkout.php" class="checkout-box-link">
         <div class="checkout-box">Puzzles</div>
+    </a>
+    <a href="item-checkout.php" class="checkout-box-link">
         <div class="checkout-box">Figures</div>
-    </div>
-            
-    
+    </a>
+</div>
+
+<div class= "checkout-functions">
+            <div class ="checkout-buttons"> AUDIT ROLL</div>
+            <div class ="checkout-buttons"> PRINT LAST RECEIPT</div>
+            <div class ="checkout-buttons"> FUNCTIONS</div>
     
    
 
