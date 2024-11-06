@@ -19,7 +19,7 @@
     $sql = "SELECT *
     FROM Transactions
     LEFT JOIN Product ON (Transactions.product_ID = Product.product_ID)
-    WHERE date_of_sale >= '01/01/2023';
+    WHERE date_of_sale >= '2024-01-01';
     ";
 
     $statement = $db->query($sql);
