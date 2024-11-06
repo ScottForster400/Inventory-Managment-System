@@ -8,25 +8,46 @@
         include "includes/connection.php";
         include "includes/header-links-include.php";
     ?>
-
+<?php 
+        include("includes/nav-include.php");
+    ?>
 </head>
 <body>
-    <?php 
-        include("includes/nav-include.php");
-        $Basket = $_GET["action"];
-    ?>
-    <div class="checkout-page-main-body">
-        <div class="checkout-page-basket">
-            <?php
-                $UserID = $_SESSION["UserUID"];
-            ?>
-        </div>
-        <div class="checkout-page-confirmation">
-            <form action="checkout-page-inc.php?action=<?php echo $Basket ?>" method="POST">
-                <input type="submit" name="submit" value="Finish Checkout">
-            </form>
-        </div>
+    
+    <section class = "checkout">
+
+    <div class="checkout-container">
+        <div class="checkout-box">Board Games</div>
+        <div class="checkout-box">Card Games</div>
+        <div class="checkout-box">Puzzles</div>
+        <div class="checkout-box">Figures</div>
     </div>
+            
+    
+    
+   
+
+    </section>
+
+
+
+
+
+
+  
+    
     <?php include("includes/footer-include.php");?>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 </body>
 </html>
