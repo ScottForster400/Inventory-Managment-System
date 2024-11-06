@@ -13,15 +13,17 @@
 <?php include("includes/nav-include.php");?>
 
 <?php
+    //$sql = "SELECT *
+    //FROM Transactions
+    //JOIN Product ON (Transactions.product_ID = Product.product_ID)
+    //date_of_sale >= '2024-01-01'
+    //;";
 
-
-    $sql = "SELECT *
-    FROM Transactions
-    JOIN Product ON (Transactions.product_ID = Product.product_ID)
-    date_of_sale >= '2024-01-01'
-    ;";
-
-    $sql = "SELECT strftime('%Y', date_of_sale) AS year, strftime('%m', date_of_sale) AS month
+    $sql = "SELECT 
+            Transactions.*,
+            Product.*,
+            strftime('%Y', date_of_sale) AS year,
+            strftime('%m', date_of_sale) AS month
             FROM Transactions
             LEFT JOIN Product ON (Transactions.product_ID = Product.product_ID)
             WHERE date_of_sale >= '2024-01-01'
@@ -65,7 +67,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                Body
+                <?php echo $row["date_of_sale"]; ?>
               </div>
               <div class="modal-footer">
                 <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Graphs</button>
