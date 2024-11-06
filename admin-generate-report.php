@@ -15,12 +15,19 @@
 <?php
 
 
-
     $sql = "SELECT *
     FROM Transactions
-    LEFT JOIN Product ON (Transactions.product_ID = Product.product_ID)
-    WHERE date_of_sale >= '2024-01-01';
-    ";
+    JOIN Product ON (Transactions.product_ID = Product.product_ID)
+    date_of_sale >= '2024-01-01'
+    ;";
+
+    $sql = "SELECT strftime('%Y', date_of_sale) AS year, strftime('%m', date_of_sale) AS month
+            FROM Transactions
+            LEFT JOIN Product ON (Transactions.product_ID = Product.product_ID)
+            WHERE date_of_sale >= '2024-01-01'
+            GROUP BY year, month
+            ORDER BY year DESC, month ASC";
+
 
     $statement = $db->query($sql);
 
@@ -40,47 +47,49 @@
     <?php
       $index = 0;
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $index++;
-        $modalId = "exampleModalToggle" . $index;
-        $modalId2 = "exampleModalToggle2" . $index;
+        $year = $row['year'];
+        $month = $row['month'];
+        $monthName = date('F', mktime(0, 0, 0, $month, 10));
+
+
     ?>
     <tr>
-      <th scope="row"><?php echo $row["date_of_sale"]?></th>
+      <th scope="row"><?php echo $monthName . ' ' . $year; ?></th>
       
       <th scope="row">
-        <div class="modal fade" id="<?php echo $modalId; ?>" aria-hidden="true" aria-labelledby="<?php echo $modalId; ?>Label" tabindex="-1">
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-               <h1 class="modal-title fs-5" id="<?php echo $modalId1; ?>Label">Report</h1>
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Report</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <?php echo $row["name"];?>: <?php echo $row["sale_price"]; ?>
+                Body
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-target="#<?php echo $modalId2; ?>" data-bs-toggle="modal">Graph Based Report</button>
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Graphs</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal fade" id="<?php echo $modalId2; ?>" aria-hidden="true" aria-labelledby="<?php echo $modalId2; ?>Label" tabindex="-1">
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="<?php echo $modalId2; ?>Label">Graph Based Report</h1>
+                <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Graph Based Report</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <?php echo $row["name"];?>: <?php echo $row["sale_price"]; ?>
+                Graph
               </div>
               <div class="modal-footer">
-                <button class="btn btn-primary" data-bs-target="#<?php echo $modalId; ?>" data-bs-toggle="modal">Normal Report</button>
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Normal Report</button>
               </div>
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" data-bs-target="#<?php echo $modalId; ?>" data-bs-toggle="modal">Generate Report</button>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Generate Report</button>
       </th>
     </tr>
     <?php
