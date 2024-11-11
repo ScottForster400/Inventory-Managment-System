@@ -13,12 +13,36 @@
     ?>
 </head>
 <body>
-    
-    <section class = "checkout">
+
+<div class="checkout-display">
+        <h2>Cart Summary</h2>
+        <ul class="cart-items">
+        <li class="item">
+            <span class="item-name">Bananagrams</span>
+            <span class="item-price">£31.99</span>
+        </li>
+        <li class="item">
+            <span class="item-name">Uno</span>
+            <span class="item-price">£11.99</span>
+        </li>
+        <li class="item">
+            <span class="item-name">Lego Supermario</span>
+            <span class="item-price">£39.99</span>
+        </li>
+        </ul>
+        <div class="total">
+        <span>Total:</span>
+        <span class="total-amount">£82.12</span>
+        </div>
+        <button class="pay-button">Pay</button>
+    </div>
+
+
+<section class = "main-checkout">
         
         <div class="checkout-container">
     <a href="item-checkout.php" class="checkout-box-link">
-        <div class="checkout-box">Board Games</div>
+        <div class="checkout-box">Board  Games</div>
     </a>
     <a href="item-checkout.php" class="checkout-box-link">
         <div class="checkout-box">Card Games</div>
@@ -32,13 +56,18 @@
 </div>
 
 <div class= "checkout-functions">
-            <div class ="checkout-buttons"> AUDIT ROLL</div>
-            <div class ="checkout-buttons"> PRINT LAST RECEIPT</div>
-            <div class ="checkout-buttons"> FUNCTIONS</div>
-    
-   
+            
+             <a href="auditroll.php" class="checkout-main-small-buttons">   
+            <div class ="checkout-buttons"> AUDIT ROLL</div>  </a>        
+            
+            <a href="receipt.php" class="checkout-main-small-buttons">   
+            <div class ="checkout-buttons"> PRINT LAST RECEIPT</div> </a>
+            
+            <a href="functions.php" class="checkout-main-small-buttons">   
+            <div class ="checkout-buttons"> FUNCTIONS</div></a>
+</div>
 
-    </section>
+  </section>
 
 
 
